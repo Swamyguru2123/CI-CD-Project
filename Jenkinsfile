@@ -24,13 +24,13 @@ pipeline{
         }
         stage('Build and tag'){
             steps{
-                sh 'docker build -t swamyguru123/puneetrajkumar .'
+                sh 'docker build -t swamyguru123/puneetguru .'
             }
         }
         stage('Containerisation'){
             steps{
                 sh '''
-                docker run -it -d --name c2 -p 9002:8080 swamyguru123/puneetrajkumar 
+                docker run -it -d --name c1 -p 9001:8080 swamyguru123/puneetguru 
                 '''
             }
         }
@@ -45,7 +45,7 @@ pipeline{
         }
          stage('Pushing image to repository'){
             steps{
-                sh 'docker push swamyguru123/puneetrajkumar'
+                sh 'docker push swamyguru123/puneetguru'
             }
         }
         
