@@ -1,5 +1,5 @@
 pipeline{
-    agent an
+    agent any
     
     tools{
         jdk 'java-11'
