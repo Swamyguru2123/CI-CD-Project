@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bas
 
 date
 epoch_time=$(date +%s)
